@@ -20,6 +20,7 @@ outputs:
     description: 'sha of the repository/branch'
 runs:
   using: 'docker'
+  shell: bash
   image: 'Dockerfile'
   args:
     - ${{ inputs.username }}
