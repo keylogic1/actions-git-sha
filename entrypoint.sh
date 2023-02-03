@@ -21,4 +21,4 @@ git config --global credential.helper store
 
 SHA=`git ls-remote "${GIT_REPO}" "${GIT_BRANCH}" | awk '{print $1}'`
 
-echo "::set-output name=sha::$SHA"
+echo "{sha}={$SHA}" >> $GITHUB_OUTPUT

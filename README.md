@@ -4,26 +4,26 @@ Retrieve git sha from a remote repository
 ## Usage
 ### Public repository
 ```
-uses: mego22/actions-git-sha@main
+uses: keylogic1/actions-git-sha@main
 with:
-  repo: "https://github.com/mego22/dotfiles.git"
+  repo: "https://github.com/keylogic1/dotfiles.git"
 
 ```
 
 ### Private repository
 ```
-uses: mego22/actions-git-sha@main
+uses: keylogic1/actions-git-sha@main
 with:
   username: "${{ github.actor }}"
   password: "${{ secrets.TOKEN }}"
-  repo: "https://github.com/mego22/git-sha-test.git"
+  repo: "https://github.com/keylogic1/git-sha-test.git"
 ```
 
 ### Non-default branch
 ```
-uses: mego22/actions-git-sha@main
+uses: keylogic1/actions-git-sha@main
 with:
-  repo: "https://github.com/mego22/dotfiles.git"
+  repo: "https://github.com/keylogic1/dotfiles.git"
   branch: "git-sha-test"
 ```
 
@@ -31,9 +31,9 @@ with:
 ```
 - name: Retrieve sha from a repo
   id: remote_sha
-  uses: mego22/actions-git-sha@main
+  uses: keylogic1/actions-git-sha@main
   with:
-    repo: "https://github.com/mego22/dotfiles.git"
+    repo: "https://github.com/keylogic1/dotfiles.git"
 
 - name: Print sha
   run: echo "The sha is ${{ steps.remote_sha.outputs.sha }}"
